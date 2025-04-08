@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const sidebarButton = document.getElementById('sidebarButton');
+        const isHidden = sidebar.style.transform === 'translateX(-200px)';
+        sidebar.style.transform = isHidden ? 'translateX(0)' : 'translateX(-200px)';
+        sidebarButton.style.transform = isHidden ? 'translateX(200px)' : 'translateX(0)';
+    }
+</script>
+<html lang="en">
+<head>
+    <title>Home | Schoology</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElements = document.querySelectorAll('video');
+            videoElements.forEach(video => {
+                video.muted = true;
+            });
+        });
+    </script>
+    <link rel="shortcut icon" href="Z.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150vh;
+            font-family: Arial, sans-serif;
+            background: url('cool.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f8ff;
+        }
+        #mainContent {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+        }
+        #about {
+            width: 80%;
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            color: #f0f8ff;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #htmlContainer {
+            width: 100%;
+            height: 105vh;
+            background: rgba(225, 23, 23, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #fileInput {
+            margin-top: 10px;
+            color: #f0f8ff;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        #clock {
+            margin-top: 20px;
+            font-size: 144px;
+            color: #39ff14;
+            text-align: center;
+        }
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background: #223958e6;
+            color: #f0f8ff;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            transform: translateX(-200px);
+        }
+        #sidebarButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: #e410b6bf;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        #sidebarButton:hover {
+            background: #2f18db;
+        }
+        video {
+            float: left;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes dance {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        #dancingGuy {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: url('dancing-guy.png') no-repeat center center;
+            background-size: contain;
+            animation: dance 0.5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebarButton" onclick="toggleSidebar()">GAMES HERE</div>
+    <style>
+        #sidebar {
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+    </style>
+    <div style="width: 100%; text-align: center; margin-bottom: 20px; background: rgba(30, 30, 30, 0.9); padding: 10px;">
+        <form action="https://www.google.com/search" method="get" target="_blank" style="display: flex; justify-content: center; align-items: center;">
+            <input type="text" name="q" placeholder="Search..." style="width: 60%; padding: 10px; border: 1px solid #555; border-radius: 5px; font-size: 16px; background: #333; color: #f0f8ff;">
+            <button type="submit" style="margin-left: 10px; padding: 10px 20px; border: none; border-radius: 5px; background: #39ff14; color: #000; font-size: 16px; cursor: pointer;">Search</button>
+        </form>
+    </div>
+    <div id="sidebar">
+        <h3>-----------Games--------</h3>
+        <ul>
+            <li><a href="./.html files/DOOM CLONE/DOOM CLONE.html" style="color: #7744e4; text-decoration: none;">Doom Clone</a></li>
+            <li><a href="./.html files/HUNGER/HUNGER.html" style="color: #7744e4; text-decoration: none;">Hunger Games Simulator</a></li>
+            <li><a href="./.html files/PACMAN/PACMAN.html" style="color: #7744e4; text-decoration: none;">3D Pacman</a></li>
+            <li><a href="./.html files/TETHER/TETHER.html" style="color: #7744e4; text-decoration: none;">Tether</a></li>
+            <li><a href="./.html files/BATTLE.html" style="color: #7744e4; text-decoration: none;">Sword Battle</a></li>
+            <li><a href="./.html files/BMAN.html" style="color: #7744e4; text-decoration: none;">Bomber Man</a></li>
+            <li><a href="./.html files/BREAK.html" style="color: #7744e4; text-decoration: none;">Breakout</a></li>
+            <li><a href="./.html files/BUBBLES.html" style="color: #7744e4; text-decoration: none;">Bubble Pop</a></li>
+            <li><a href="./.html files/CARS.html" style="color: #7744e4; text-decoration: none;">Little Car Game</a></li>
+            <li><a href="./.html files/CHECK DOOM.html" style="color: #7744e4; text-decoration: none;">Doom on Checkboxes</a></li>
+            <li><a href="./.html files/CHROMA.html" style="color: #7744e4; text-decoration: none;">Chroma</a></li>
+            <li><a href="./.html files/DINO.html" style="color: #7744e4; text-decoration: none;">Chrome Dino</a></li>
+            <li><a href="./.html files/DRIVE.html" style="color: #7744e4; text-decoration: none;">Polytrack</a></li>
+            <li><a href="./.html files/EAGLERCRAFT.html" style="color: #7744e4; text-decoration: none;">Minecraft Beta</a></li>
+            <li><a href="./.html files/EAGLERCRAFT2.html" style="color: #7744e4; text-decoration: none;">Minecraft</a></li>
+            <li><a href="./.html files/FROG.html" style="color: #7744e4; text-decoration: none;">Simple Frogger</a></li>
+            <li><a href="./.html files/GLITCH.html" style="color: #7744e4; text-decoration: none;">Evil Glitch</a></li>
+            <li><a href="./.html files/KON.html" style="color: #7744e4; text-decoration: none;">Konnect</a></li>
+            <li><a href="./.html files/MAR64.html" style="color: #7744e4; text-decoration: none;">Mario 64</a></li>
+            <li><a href="./.html files/MARIO.html" style="color: #7744e4; text-decoration: none;">OG Mario</a></li>
+            <li><a href="./.html files/MISSILE.html" style="color: #7744e4; text-decoration: none;">Simple Missile</a></li>
+            <li><a href="./.html files/MMART.html" style="color: #7744e4; text-decoration: none;">Monkey Mart</a></li>
+            <li><a href="./.html files/PDF DOOM.html" style="color: #7744e4; text-decoration: none;">PDF Doom</a></li>
+            <li><a href="./.html files/POKEWHO.html" style="color: #7744e4; text-decoration: none;">Pokemon Guesser</a></li>
+            <li><a href="./.html files/PONG.html" style="color: #7744e4; text-decoration: none;">Pong</a></li>
+            <li><a href="./.html files/SQHOLE.html" style="color: #7744e4; text-decoration: none;">Black Hole Square</a></li>
+            <li><a href="./.html files/STACKER.html" style="color: #7744e4; text-decoration: none;">Stacker</a></li>
+            <li><a href="./.html files/RUN.html" style="color: #7744e4; text-decoration: none;">Sphere Hop</a></li>
+            <li><a href="./.html files/RETHAUNT.html" style="color: #7744e4; text-decoration: none;">Retro Haunt</a></li>
+            <li><a href="./.html files/ROCKL.html" style="color: #7744e4; text-decoration: none;">2D Rocket League</a></li>
+            <li><a href="./.html files/CHICKEN.html" style="color: #7744e4; text-decoration: none;">Crossy Road</a></li>
+            <li>\/ GAME WEBSITES \/</li>
+            <li><a href="./.html files/NTTLWB.html" style="color: #7744e4; text-decoration: none;">Nettle Web</a></li>
+            <li><a href="./.html files/GAMES.html" style="color: #7744e4; text-decoration: none;">QAG99</a></li>
+            <li><a href="https://classroom-6x.io" target="_blank" style="color: #7744e4; text-decoration: none;">Classroom 6X (No Disguise)</a></li>
+            <li>\/ CLASSIC GAMES \/</li>
+            <li><a href="./.html files/BJACK.html" style="color: #7744e4; text-decoration: none;">Blackjack</a></li>
+            <li><a href="./.html files/SOLITAIRE.html" style="color: #7744e4; text-decoration: none;">Solitaire</a></li>
+            <li>\/ SIMPLE GAMES \/</li>
+            <li><a href="./.html files/BLOCKS/BLOCKS.html" style="color: #7744e4; text-decoration: none;">Simple Minecraft</a></li>
+            <li><a href="./.html files/JUMP.html" style="color: #7744e4; text-decoration: none;">Simple Doodle Jump</a></li>
+            <li><a href="./.html files/SNAKE.html" style="color: #7744e4; text-decoration: none;">Simple Snake</a></li>
+            <li><a href="./.html files/TETRIS.html" style="color: #7744e4; text-decoration: none;">Simple Tetris</a></li>
+            <li><a href="./.html files/TRAIL.html" style="color: #7744e4; text-decoration: none;">Simple Oregon Trail</a></li> 
+        <p>Thanks for playing ;)</p>
+        <div style="margin-top: 20px; text-align: center;">
+            <img src="fade.webp" alt="Low Taper Fade" style="width: 10%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+    <div id="mainContent" style="display:  100%;"></div>
+        <div id="about">
+            <h2>Ice cream Flavors</h2>
+            <p>Alumni Swirl,
+                Apple Cobbler Crunch,
+                Bittersweet Mint,
+                Black Cow,
+                Black Raspberry ,
+                Butter Pecan,
+                Cherry Sorbet,
+                Chocolate,
+                Chocolate Chip Cookie Dough,
+                Chocolate Marble,
+                Coconut Chip,
+                Coffee Mocha Fudge,
+                Cookies-n-Cream,
+                Crazy Charlie Sundae Swirl,
+                Death By Chocolate,
+                Grand Slam Chocolate Chip Cookie Dough,
+                Grilled Stickies,
+                Happy Happy Joy Joy,
+                Keeney Beany Chocolate,
+                Lemon Sorbet,
+                Mango Sorbet,
+                Mint Chocolate Chip,
+                Mint Chip,
+                Mocha Chip,
+                Orange Sorbet,
+                Lion S'mores,
+                Peanut Butter Cup,
+                Peppermint Stick,
+                Pistachio,
+                Pumpkin Pie,
+                Raspberry Sorbet,
+                Red Velvet Cake,
+                and Rocky Road. 
+                </p>
+        </div>
+        <div id="htmlContainer">
+            <iframe id="iframeBox"></iframe>
+            <input id="fileInput" type="file" accept=".html" onchange="loadFile(event)">
+        </div>
+        <div id="clock"></div>
+        <div id="userInputSection">
+            <h3 style="text-align: center; color: #00ff99; margin-bottom: 10px;">Type anything and it will save for next time! :></h3>
+            <div style="display: flex; justify-content: flex-start; align-items: left; height: 100%; width: 100%; margin-left: 50px;"></div>
+            <textarea id="userInput" placeholder="Type here..." style="width: 1400px; height: 150px; padding: 10px; border: 2px solid #3c862f2d; border-radius: 10px; background: #333; color: #f0f8ff; font-size: 16px; resize: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="dancingGuy"></div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarButton = document.getElementById('sidebarButton');
+            const isHidden = sidebar.style.transform === 'translateX(-200px)';
+            sidebar.style.transform = isHidden ? 'translateX(0)' : 'translateX(-200px)';
+            sidebarButton.style.transform = isHidden ? 'translateX(200px)' : 'translateX(0)';
+        }
+
+        function loadFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const iframe = document.getElementById('iframeBox');
+                    iframe.srcdoc = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            clock.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const userInput = document.getElementById('userInput');
+        userInput.value = localStorage.getItem('userInput') || '';
+        userInput.addEventListener('input', () => {
+            localStorage.setItem('userInput', userInput.value);
+        });
+    </script>
+</body>
+</html>
